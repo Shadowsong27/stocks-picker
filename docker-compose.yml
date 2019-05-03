@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3'
 services:
     redis:
         image: 'redis:3.2.7'
@@ -27,7 +27,6 @@ services:
             - POSTGRES_USER=airflow
             - POSTGRES_PASSWORD=airflow
             - POSTGRES_DB=airflow
-            - REDIS_PASSWORD=redispass
         volumes:
             - ./dags:/usr/local/airflow/dags
             - ./plugins:/usr/local/airflow/plugins
